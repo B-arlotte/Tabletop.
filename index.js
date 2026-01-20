@@ -40,7 +40,7 @@ function doesStrikeHit(attack, ac) {
  * @returns {boolean} whether the strike is a critical hit
  */
 function doesStrikeCrit(attack, ac) {
-  // TODO
+  
   return attack >= ac + 10;
 }
 
@@ -53,8 +53,12 @@ function doesStrikeCrit(attack, ac) {
  * @returns {number} total hit points after healing
  */
 function heal(maxHp, currentHp, healAmount) {
-  // TODO
-
+  const newHp = currentHp + healAmount;
+  if (newHp > maxHp) {
+    return maxHp;
+  } else {
+    return newHp;
+  }
 }
 
 /**
