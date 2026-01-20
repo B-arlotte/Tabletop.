@@ -29,7 +29,7 @@ function isHidden(hiding, aware) {
  * @returns {boolean} whether the strike hits
  */
 function doesStrikeHit(attack, ac) {
-  // TODO
+  return attack >= ac;
 }
 
 /**
@@ -41,6 +41,7 @@ function doesStrikeHit(attack, ac) {
  */
 function doesStrikeCrit(attack, ac) {
   // TODO
+  return attack >= ac + 10;
 }
 
 /**
@@ -53,6 +54,7 @@ function doesStrikeCrit(attack, ac) {
  */
 function heal(maxHp, currentHp, healAmount) {
   // TODO
+
 }
 
 /**
