@@ -92,7 +92,20 @@ function getProficiencyBonus(level, rank) {
  * @returns {number} the cover bonus to AC
  */
 function getCoverBonus(behindObstacle, takingCover) {
-  // TODO
+
+  // if not behind an obstacle no bonus so return early
+  if (!behindObstacle) {
+    return 0;
+  }
+
+  // if taking cover and behind an obstacle get the max bonus
+  if (takingCover && behindObstacle) {
+    return +4;
+  }
+
+  // here we know the creature is behind an obstacle but not taking cover
+  // return the behind the obstacle bonus
+  return +2;
 }
 
 /**
@@ -120,7 +133,7 @@ function getRemainingHp(maxHp, currentHp, damage) {
  * @returns {boolean} whether the creature can see
  */
 function canSee(light, vision) {
-  // TODO
+  
 }
 
 /**
