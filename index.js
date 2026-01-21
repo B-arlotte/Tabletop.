@@ -78,8 +78,11 @@ function heal(maxHp, currentHp, healAmount) {
  * @returns {number} the character's proficiency bonus
  */
 function getProficiencyBonus(level, rank) {
-  // TODO
+  // TODO 
+
+  
 }
+
 
 /**
  * A creature can get a bonus to its armor class (AC) by taking cover.
@@ -162,5 +165,10 @@ function canSee(light, vision) {
  */
 function getStrikeDamage(attack, ac, damage) {
 
-
+if (!doesStrikeHit(attack, ac)) {
+    return 0;
+  }
+  if (doesStrikeCrit(damage, ac)) {
+    return damage * 2;
+  }
 }
